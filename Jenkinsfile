@@ -21,5 +21,12 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('Test') {
+            steps {
+                sh '''
+                    npm test
+                '''
+            }
+        }
     }
 }
